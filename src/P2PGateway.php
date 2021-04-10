@@ -16,6 +16,7 @@ use Omnipay\Qiwi\Message\PurchaseRequest;
  * @method \Omnipay\Common\Message\RequestInterface updateCard(array $options = [])
  * @method \Omnipay\Common\Message\RequestInterface deleteCard(array $options = [])
  * @method \Omnipay\Common\Message\RequestInterface authorize(array $options = [])
+ * @method \Omnipay\Common\Message\RequestInterface fetchTransaction(array $options = [])
  */
 class P2PGateway extends AbstractGateway
 {
@@ -95,4 +96,8 @@ class P2PGateway extends AbstractGateway
         return $this->createRequest(NotificationRequest::class, $parameters);
     }
 
+    public function __call($name, $arguments)
+    {
+        // TODO: Implement @method \Omnipay\Common\Message\RequestInterface fetchTransaction(array $options = [])
+    }
 }
