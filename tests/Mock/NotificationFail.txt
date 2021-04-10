@@ -1,0 +1,26 @@
+HTTP/1.1 200 OK
+Status: 200 OK
+
+{
+   "bill":{
+      "siteId":"89a11b-00",
+      "billId":"1f73402c644002a7ea3c9532e8ba4139",
+      "amount":{
+         "value":"10.00",
+         "currency":"RUB"
+      },
+      "status":{
+         "value":"PAID",
+         "changedDateTime":"2021-01-01T00:00:01+03"
+      },
+      "customer":[],
+      "customFields":{
+         "CHECKOUT_REFERER":"https://example.com",
+         "themeCode":"Test-MNaIYqI4Di"
+      },
+      "comment":null,
+      "creationDateTime":"2021-01-01T00:00:01+03",
+      "expirationDateTime":"2021-01-01T00:00:01+03"
+   },
+   "version":"1"
+}
