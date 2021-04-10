@@ -17,7 +17,7 @@ use Omnipay\Qiwi\Message\PurchaseRequest;
  * @method \Omnipay\Common\Message\RequestInterface deleteCard(array $options = [])
  * @method \Omnipay\Common\Message\RequestInterface authorize(array $options = [])
  */
-class QiwiP2PGateway extends AbstractGateway
+class P2PGateway extends AbstractGateway
 {
     public function getName()
     {
