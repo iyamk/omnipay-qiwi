@@ -2,12 +2,12 @@
 
 **Qiwi P2P gateway for the Omnipay PHP payment processing library**
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/leonardjke/omnipay-omnipay-qiwi.svg?style=flat-square)](https://packagist.org/packages/leonardjke/omnipay-omnipay-qiwi)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/leonardjke/omnipay-qiwi.svg?style=flat-square)](https://packagist.org/packages/leonardjke/omnipay-omnipay-qiwi)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/leonardjke/omnipay-omnipay-qiwi/master.svg?style=flat-square)](https://travis-ci.org/leonardjke/omnipay-omnipay-qiwi)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/leonardjke/omnipay-omnipay-qiwi.svg?style=flat-square)](https://scrutinizer-ci.com/g/leonardjke/omnipay-omnipay-qiwi/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/leonardjke/omnipay-omnipay-qiwi.svg?style=flat-square)](https://scrutinizer-ci.com/g/leonardjke/omnipay-omnipay-qiwi)
-[![Total Downloads](https://img.shields.io/packagist/dt/leonardjke/omnipay-omnipay-qiwi.svg?style=flat-square)](https://packagist.org/packages/leonardjke/omnipay-omnipay-qiwi)
+[![Build Status](https://img.shields.io/travis/leonardjke/omnipay-qiwi/master.svg?style=flat-square)](https://travis-ci.org/leonardjke/omnipay-omnipay-qiwi)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/leonardjke/omnipay-qiwi.svg?style=flat-square)](https://scrutinizer-ci.com/g/leonardjke/omnipay-omnipay-qiwi/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/leonardjke/omnipay-qiwi.svg?style=flat-square)](https://scrutinizer-ci.com/g/leonardjke/omnipay-omnipay-qiwi)
+[![Total Downloads](https://img.shields.io/packagist/dt/leonardjke/omnipay-qiwi.svg?style=flat-square)](https://packagist.org/packages/leonardjke/omnipay-omnipay-qiwi)
 
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment
