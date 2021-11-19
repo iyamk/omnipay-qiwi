@@ -2,20 +2,17 @@
 
 namespace Omnipay\Qiwi\Tests\Traits;
 
-use Omnipay\Qiwi\Traits\ResponseFieldsTrait;
 use PHPUnit\Framework\TestCase;
 
 class ResponseFieldsTraitTest extends TestCase
 {
-
-    use ResponseFieldsTrait;
 
     /**
      * @var array
      */
     private $testData;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->testData = [];
     }
@@ -49,4 +46,34 @@ class ResponseFieldsTraitTest extends TestCase
     }
 
 
+    private function get($key, $default = null)
+    {
+        $array = $this->getData();
+
+        if (!is_array($array)) {
+            return $default;
+        }
+
+        if (is_null($key)) {
+            return $array;
+        }
+
+        if (array_key_exists($key, $array)) {
+            return $array[$key];
+        }
+
+        if (strpos($key, '.') === false) {
+            return $array[$key] ?? $default;
+        }
+
+        foreach (explode('.', $key) as $segment) {
+            if (is_array($array) && array_key_exists($segment, $array)) {
+                $array = $array[$segment];
+            } else {
+                return $default;
+            }
+        }
+
+        return $array;
+    }
 }

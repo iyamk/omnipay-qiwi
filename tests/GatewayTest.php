@@ -12,7 +12,7 @@ class GatewayTest extends GatewayTestCase
     /** @var P2PGateway */
     protected $gateway;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
