@@ -95,9 +95,4 @@ class P2PGateway extends AbstractGateway
     {
         return $this->createRequest(NotificationRequest::class, $parameters);
     }
-
-    public function __call($name, $arguments)
-    {
-        // TODO: Implement @method \Omnipay\Common\Message\RequestInterface fetchTransaction(array $options = [])
-    }
 }
