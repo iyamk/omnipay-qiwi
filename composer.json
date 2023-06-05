@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "omnipay/common": "v3.1.2"
+        "omnipay/common": "v3.2.1"
     },
     "require-dev": {
         "omnipay/tests": "^v4.1.0",
