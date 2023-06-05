@@ -1,12 +1,12 @@
 {
-    "name": "iyamk/omnipay-qiwi",
+    "name": "leonardjke/omnipay-qiwi",
     "description": "Qiwi p2p gateway for Omnipay payment processing library",
     "keywords": [
         "omnipay",
         "qiwi",
         "qiwi-p2p"
     ],
-    "homepage": "https://github.com/iyamk/omnipay-qiwi",
+    "homepage": "https://github.com/leonardjke/omnipay-qiwi",
     "license": "MIT",
     "authors": [
         {
