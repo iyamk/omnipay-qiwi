@@ -36,7 +36,7 @@ class NotificationRequestTest extends TestCase
     {
         $data = $this->request->getData();
         $this->assertEquals([
-            'version'    => 1,
+            'version'    => '1',
             'bill'       => [
                 'siteId'             => '89a11b-00',
                 'billId'             => '1f73402c644002a7ea3c9532e8ba4139',
@@ -57,8 +57,6 @@ class NotificationRequestTest extends TestCase
                 'creationDateTime'   => '2021-01-01T00:00:01+03',
                 'expirationDateTime' => '2021-01-01T00:00:01+03',
             ],
-            'secret_key' => null,
-            'hash'       => null,
         ], $data);
     }
 
@@ -66,6 +64,6 @@ class NotificationRequestTest extends TestCase
     {
         $data     = $this->request->getData();
         $response = $this->request->sendData($data);
-        $this->assertSame('Omnipay\Qiwi\Message\NotificationResponse', get_class($response));
+        $this->assertSame('Omnipay\Qiwi\Message\NotificationRequest', get_class($response));
     }
 }

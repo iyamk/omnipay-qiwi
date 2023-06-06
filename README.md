@@ -26,11 +26,66 @@ $ composer require league/omnipay leonardjke/omnipay-qiwi
 
 ## Usage
 
-The following gateways are provided by this package:
+### How to initialize Qiwi P2P
+```php
+/** @var P2PGateway $gateway */
+$gateway = Omnipay::create('Qiwi_P2P');
 
- * omnipay-qiwi
+$gateway->initialize([
+    'public_key' => 'user-public-key',
+    'secret_key' => 'user-private-key',
+]);
+```
+To add some custom configs use. Example, https://developer.qiwi.com/en/p2p-payments/#custom
+```php
+$gateway->setCustomFields(['themeCode' => 'codeStyle']);
+```
 
-For general usage instructions, please see the main [Omnipay](https://github.com/thephpleague/omnipay) repository.
+To set return page use 
+```php
+$gateway->setSuccessUrl('https://example.com/page-to-return-after-complete');
+```
+
+Or everything in initialize step
+```php
+/** @var P2PGateway $gateway */
+$gateway = Omnipay::create('Qiwi_P2P');
+
+$gateway->initialize([
+    'public_key' => 'user-public-key',
+    'secret_key' => 'user-private-key',
+    'success_url' => 'https://example.com/page-to-return-after-complete',
+    'custom_fields' => ['themeCode' => 'customCodeStyle'],
+]);
+```
+
+### How to accept webhook from qiwi
+```php
+/** @var P2PGateway $gateway */
+$gateway = Omnipay::create('Qiwi_P2P');
+
+$gateway->initialize([
+    'public_key' => 'user-public-key',
+    'secret_key' => 'user-private-key',
+]);
+
+/** @var NotificationRequest $gateway */
+$response = $gateway->acceptNotification();
+
+// Check request signature
+if (!$response->isValid()) {
+    return 'error message';
+}
+
+// Status from NotificationInterface
+$status = $response->getTransactionStatus();
+
+$amount = $response->getAmount();
+$message = $response->getMessage();
+$currency = $response->getCurrency();
+$transactionId = $response->getTransactionId();
+$transactionReference = $response->getTransactionReference();
+```
 
 ## Support
 
